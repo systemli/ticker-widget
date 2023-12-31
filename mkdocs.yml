@@ -8,6 +8,7 @@ nav:
 
 theme:
   name: material
+  logo: assets/logo.png
   palette:
     primary: "blue"
     accent: "blue"
