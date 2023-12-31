@@ -1,0 +1,16 @@
+---
+site_name: Ticker Widget
+site_author: Systemli
+repo_url: https://github.com/systemli/ticker-widget
+
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+  palette:
+    primary: "blue"
+    accent: "blue"
+
+markdown_extensions:
+  - admonition
