@@ -1,6 +1,5 @@
 {
   "name": "ticker-widget",
-  "version": "0.0.1",
   "description": "Ticker Widget as Web Component",
   "author": {
     "name": "Systemli",
