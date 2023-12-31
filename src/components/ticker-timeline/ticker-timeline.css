@@ -1,0 +1,43 @@
+.ticker-timeline__headline {
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+
+.ticker-timeline__subheadline {
+  padding-bottom: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  border-bottom: 1px solid #000;
+}
+
+.ticker-timeline__entry {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.ticker-timeline__entry:last-child {
+  border-bottom: none;
+}
+
+.ticker-timeline__paragraph {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0.75rem;
+}
+
+.ticker-timeline__attachment {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.ticker-timeline__attachment img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ticker-timeline__date {
+  font-size: 0.75rem;
+}
