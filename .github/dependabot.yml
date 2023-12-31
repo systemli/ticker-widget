@@ -11,9 +11,6 @@ updates:
     schedule:
       interval: "monthly"
     groups:
-      stencil:
-        patterns:
-          - "@stencil/*"
       development:
         patterns:
           - "@types/jest"
