@@ -22,10 +22,13 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Build
+        run: npm run build
+
       - name: Bump Version
         run: npm version ${{ github.event.release.tag_name }} --git-tag-version false
 
       - name: Publish
-        run: npm publish --access public
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
