@@ -26,4 +26,4 @@ You need to include the script from unpkg.com and then you can use the component
 
 ## Demo
 
-<iframe src="/demo.html" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="systemli-ticker-widget"></iframe>
+<iframe src="https://systemli.github.io/ticker-widget/demo.html" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="systemli-ticker-widget"></iframe>
