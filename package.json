@@ -41,5 +41,5 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "21.1.1"
   },
-  "license": "MIT"
+  "license": "LGPL-3.0-or-later"
 }
