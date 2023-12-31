@@ -1,0 +1,19 @@
+name: Publish Page
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Publish Page
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Publish Page
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          folder: pages
