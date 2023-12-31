@@ -6,6 +6,7 @@
     "email": "admin@systemli.org",
     "url": "https://www.systemli.org"
   },
+  "private": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
