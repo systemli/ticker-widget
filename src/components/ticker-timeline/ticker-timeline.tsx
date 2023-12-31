@@ -32,7 +32,7 @@ export class TickerTimeline {
   @State() items: Array<Message> = [];
   @State() error: string = '';
 
-  @Prop() title: string = '';
+  @Prop() header: string = '';
 
   @Prop() domain: string;
 
@@ -51,14 +51,14 @@ export class TickerTimeline {
       });
   }
 
-  headline(title: string) {
-    if (title === '') {
+  headline(header: string) {
+    if (header === '') {
       return;
     }
 
     return (
       <div>
-        <h2 class="ticker-timeline__headline">{title}</h2>
+        <h2 class="ticker-timeline__headline">{header}</h2>
         <p class="ticker-timeline__subheadline">
           from <a href={'https://' + this.domain}>{this.domain}</a>
         </p>
@@ -94,7 +94,7 @@ export class TickerTimeline {
     if (this.error !== '') {
       return (
         <Host class="ticker-timeline">
-          {this.headline(this.title)}
+          {this.headline(this.header)}
           <div class="ticker-timeline__error">
             <p>Sorry, unable to fetch messages.</p>
           </div>
@@ -105,7 +105,7 @@ export class TickerTimeline {
     if (this.items.length === 0) {
       return (
         <Host class="ticker-timeline">
-          {this.headline(this.title)}
+          {this.headline(this.header)}
           <div class="ticker-timeline__error">
             <p>No messages found.</p>
           </div>
@@ -115,7 +115,7 @@ export class TickerTimeline {
 
     return (
       <Host class="ticker-timeline">
-        {this.headline(this.title)}
+        {this.headline(this.header)}
         {this.items.map(item => (
           <div class="ticker-timeline__entry">
             {this.content(item.text)}

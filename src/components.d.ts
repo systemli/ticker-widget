@@ -9,8 +9,8 @@ export namespace Components {
     interface TickerTimeline {
         "apiUrl": string;
         "domain": string;
+        "header": string;
         "limit": number;
-        "title": string;
     }
 }
 declare global {
@@ -28,8 +28,8 @@ declare namespace LocalJSX {
     interface TickerTimeline {
         "apiUrl"?: string;
         "domain"?: string;
+        "header"?: string;
         "limit"?: number;
-        "title"?: string;
     }
     interface IntrinsicElements {
         "ticker-timeline": TickerTimeline;
