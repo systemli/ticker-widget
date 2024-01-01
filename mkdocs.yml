@@ -1,5 +1,5 @@
 ---
-site_name: Ticker Widget
+site_name: Systemli Ticker Widget
 site_author: Systemli
 repo_url: https://github.com/systemli/ticker-widget
 
@@ -13,6 +13,14 @@ theme:
   palette:
     primary: "blue"
     accent: "blue"
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.systemli.org
+    - icon: fontawesome/brands/github
+      link: https://github.com/systemli
 
 markdown_extensions:
   - admonition
