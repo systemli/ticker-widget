@@ -31,7 +31,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.17.2",
+    "@stencil/core": "^4.26.0",
     "date-fns": "^3.6.0"
   },
   "devDependencies": {
