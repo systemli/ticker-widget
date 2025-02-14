@@ -34,14 +34,14 @@ export class TickerTimeline {
 
   @Prop() header: string = '';
 
-  @Prop() domain: string;
+  @Prop() origin: string;
 
   @Prop() apiUrl: string = 'https://ticker-api.systemli.org';
 
   @Prop() limit: number = 10;
 
   async connectedCallback() {
-    fetch(`${this.apiUrl}/v1/timeline?origin=${this.domain}&limit=${this.limit}`)
+    fetch(`${this.apiUrl}/v1/timeline?origin=${this.origin}&limit=${this.limit}`)
       .then(response => response.json())
       .then((response: Response) => {
         this.items = response.data.messages;
@@ -60,7 +60,7 @@ export class TickerTimeline {
       <div>
         <h2 class="ticker-timeline__headline">{header}</h2>
         <p class="ticker-timeline__subheadline">
-          from <a href={'https://' + this.domain}>{this.domain}</a>
+          from <a href={this.origin}>{this.origin.replace(/https?:\/\//, '')}</a>
         </p>
       </div>
     );
