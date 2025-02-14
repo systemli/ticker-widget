@@ -32,7 +32,9 @@
   },
   "dependencies": {
     "@stencil/core": "^4.26.0",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "linkify-html": "^4.2.0",
+    "linkifyjs": "^4.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
