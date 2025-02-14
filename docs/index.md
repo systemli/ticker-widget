@@ -12,7 +12,7 @@ You need to include the script from unpkg.com and then you can use the component
 
 ```html
 <script type="module" src="https://unpkg.com/@systemli/ticker-widget"></script>
-<ticker-timeline domain="updates.systemli.org" limit="10" header="Latest Updates"></ticker-timeline>
+<ticker-timeline origin="https://updates.systemli.org" limit="10" header="Latest Updates"></ticker-timeline>
 ```
 
 ## Properties
@@ -20,7 +20,7 @@ You need to include the script from unpkg.com and then you can use the component
 | Property | Attribute | Description | Type     | Default                             |
 | -------- | --------- | ----------- | -------- | ----------------------------------- |
 | `apiUrl` | `api-url` |             | `string` | `'https://ticker-api.systemli.org'` |
-| `domain` | `domain`  |             | `string` | `undefined`                         |
+| `origin` | `origin`  |             | `string` | `undefined`                         |
 | `header` | `header`  |             | `string` | `''`                                |
 | `limit`  | `limit`   |             | `number` | `10`                                |
 

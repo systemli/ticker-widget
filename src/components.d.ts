@@ -8,9 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface TickerTimeline {
         "apiUrl": string;
-        "domain": string;
         "header": string;
         "limit": number;
+        "origin": string;
     }
 }
 declare global {
@@ -27,9 +27,9 @@ declare global {
 declare namespace LocalJSX {
     interface TickerTimeline {
         "apiUrl"?: string;
-        "domain"?: string;
         "header"?: string;
         "limit"?: number;
+        "origin"?: string;
     }
     interface IntrinsicElements {
         "ticker-timeline": TickerTimeline;
