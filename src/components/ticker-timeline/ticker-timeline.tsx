@@ -1,5 +1,6 @@
 import { Component, Host, Prop, State, h } from '@stencil/core';
 import { format, formatDistance } from 'date-fns';
+import linkifyHtml from 'linkify-html';
 
 type Response = {
   data: MessageResponse;
@@ -79,15 +80,23 @@ export class TickerTimeline {
   }
 
   content(text: string) {
-    const paragraphs = text.split('\n');
+    const div = document.createElement('div');
+    div.className = 'ticker-timeline__content';
 
-    return (
-      <div>
-        {paragraphs.map(paragraph => (
-          <p class="ticker-timeline__paragraph">{paragraph}</p>
-        ))}
-      </div>
-    );
+    text.split('\n').forEach(paragraph => {
+      const p = document.createElement('p');
+      p.innerHTML = linkifyHtml(paragraph, {
+        format: (value, type) => {
+          if (type === 'url' && value.length > 30) {
+            value = value.slice(0, 30) + '…';
+          }
+          return value;
+        },
+      });
+      div.appendChild(p);
+    });
+
+    return <div innerHTML={div.innerHTML}></div>;
   }
 
   render() {
