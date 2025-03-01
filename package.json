@@ -31,7 +31,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.26.0",
+    "@stencil/core": "^4.27.1",
     "date-fns": "^4.1.0",
     "linkify-html": "^4.2.0",
     "linkifyjs": "^4.2.0"
