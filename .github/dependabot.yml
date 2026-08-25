@@ -5,12 +5,22 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
     groups:
+      stencil:
+        patterns:
+          - "@stencil/core"
+          - "date-fns"
+          - "linkify-html"
+          - "linkifyjs"
       development:
         patterns:
           - "@types/jest"
