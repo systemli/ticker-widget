@@ -17,12 +17,11 @@ You need to include the script from unpkg.com and then you can use the component
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default                             |
-| -------- | --------- | ----------- | -------- | ----------------------------------- |
-| `apiUrl` | `api-url` |             | `string` | `'https://ticker-api.systemli.org'` |
-| `origin` | `origin`  |             | `string` | `undefined`                         |
-| `header` | `header`  |             | `string` | `''`                                |
-| `limit`  | `limit`   |             | `number` | `10`                                |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `origin` | `origin`  |             | `string` | `undefined` |
+| `header` | `header`  |             | `string` | `''`        |
+| `limit`  | `limit`   |             | `number` | `10`        |
 
 ## Demo
 

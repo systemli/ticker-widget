@@ -7,8 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface TickerTimeline {
-        "apiUrl": string;
+        /**
+          * @default ''
+         */
         "header": string;
+        /**
+          * @default 10
+         */
         "limit": number;
         "origin": string;
     }
@@ -26,8 +31,13 @@ declare global {
 }
 declare namespace LocalJSX {
     interface TickerTimeline {
-        "apiUrl"?: string;
+        /**
+          * @default ''
+         */
         "header"?: string;
+        /**
+          * @default 10
+         */
         "limit"?: number;
         "origin"?: string;
     }
