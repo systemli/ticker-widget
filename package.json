@@ -7,6 +7,9 @@
     "url": "https://www.systemli.org"
   },
   "private": false,
+  "engines": {
+    "node": "24.x"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
