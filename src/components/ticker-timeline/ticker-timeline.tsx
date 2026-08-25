@@ -15,7 +15,6 @@ type Message = {
   id: number;
   createdAt: string;
   text: string;
-  geoInformation: string;
   attachments: Array<Attachment>;
 };
 
@@ -37,12 +36,10 @@ export class TickerTimeline {
 
   @Prop() origin: string;
 
-  @Prop() apiUrl: string = 'https://ticker-api.systemli.org';
-
   @Prop() limit: number = 10;
 
   async connectedCallback() {
-    fetch(`${this.apiUrl}/v1/timeline?origin=${this.origin}&limit=${this.limit}`)
+    fetch(`${this.origin}/api/timeline?limit=${this.limit}`)
       .then(response => response.json())
       .then((response: Response) => {
         this.items = response.data.messages;
@@ -72,7 +69,7 @@ export class TickerTimeline {
       <div>
         {attachments.map(attachment => (
           <div class="ticker-timeline__attachment">
-            <img src={attachment.url} />
+            <img src={new URL(attachment.url, this.origin).toString()} />
           </div>
         ))}
       </div>

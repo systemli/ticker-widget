@@ -11,12 +11,11 @@ This component shows the timeline of a ticker. The number of entries can be limi
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default                             |
-| -------- | --------- | ----------- | -------- | ----------------------------------- |
-| `apiUrl` | `api-url` |             | `string` | `'https://ticker-api.systemli.org'` |
-| `header` | `header`  |             | `string` | `''`                                |
-| `limit`  | `limit`   |             | `number` | `10`                                |
-| `origin` | `origin`  |             | `string` | `undefined`                         |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `header` | `header`  |             | `string` | `''`        |
+| `limit`  | `limit`   |             | `number` | `10`        |
+| `origin` | `origin`  |             | `string` | `undefined` |
 
 
 ----------------------------------------------
