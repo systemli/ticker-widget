@@ -41,15 +41,22 @@ declare namespace LocalJSX {
         "limit"?: number;
         "origin"?: string;
     }
+
+    interface TickerTimelineAttributes {
+        "header": string;
+        "origin": string;
+        "limit": number;
+    }
+
     interface IntrinsicElements {
-        "ticker-timeline": TickerTimeline;
+        "ticker-timeline": Omit<TickerTimeline, keyof TickerTimelineAttributes> & { [K in keyof TickerTimeline & keyof TickerTimelineAttributes]?: TickerTimeline[K] } & { [K in keyof TickerTimeline & keyof TickerTimelineAttributes as `attr:${K}`]?: TickerTimelineAttributes[K] } & { [K in keyof TickerTimeline & keyof TickerTimelineAttributes as `prop:${K}`]?: TickerTimeline[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ticker-timeline": LocalJSX.TickerTimeline & JSXBase.HTMLAttributes<HTMLTickerTimelineElement>;
+            "ticker-timeline": LocalJSX.IntrinsicElements["ticker-timeline"] & JSXBase.HTMLAttributes<HTMLTickerTimelineElement>;
         }
     }
 }
