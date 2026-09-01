@@ -28,3 +28,15 @@ updates:
           - "jest"
           - "jest-*"
           - "puppeteer"
+    ignore:
+      # stencil test (jest 29-based) rejects newer major jest versions; see
+      # https://github.com/systemli/ticker-widget/pull/84
+      - dependency-name: "jest"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "jest-cli"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/jest"
+        update-types: ["version-update:semver-major"]
+      # keep @types/node aligned with the Node 24 engine (.nvmrc)
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
